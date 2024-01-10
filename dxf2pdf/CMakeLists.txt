@@ -10,7 +10,7 @@ project(dxf2pdf VERSION 0.1.0 LANGUAGES CXX)
 
 # c++11 is obligatory for LibreCAD
 message("We will be using CPP11 features")
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 #set(CMAKE_CXX_EXTENSIONS OFF)
 
