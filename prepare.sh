@@ -30,7 +30,7 @@ if [ -d $LIBRECAD_DIR ]; then
 fi
 
 echo "Getting LibreCAD sources from $LIBRECAD_GIT"
-git clone $LIBRECAD_GIT $LIBRECAD_DIR
+# git clone $LIBRECAD_GIT $LIBRECAD_DIR
 
 pushd $LIBRECAD_DIR >/dev/null
 echo "Switched into $LIBRECAD_DIR directory"
