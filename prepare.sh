@@ -23,14 +23,15 @@ LIBRECAD_COMMIT="664464a5fcd6718b51061006e61919063583f995"
 # will override the commit hash set above.
 LIBRECAD_COMMIT=${1:-$LIBRECAD_COMMIT}
 
-# Cleanup
-#if [ -d $LIBRECAD_DIR ]; then
-#    echo "Removing old $LIBRECAD_DIR"
-#    rm -rf $LIBRECAD_DIR
-#fi
-
-echo "Getting LibreCAD sources from $LIBRECAD_GIT"
-# git clone $LIBRECAD_GIT $LIBRECAD_DIR
+if [ "$1" == "latest" ]; then
+    # Cleanup
+    if [ -d $LIBRECAD_DIR ]; then
+        echo "Removing old $LIBRECAD_DIR"
+        rm -rf $LIBRECAD_DIR
+    fi
+    echo "Getting LibreCAD sources from $LIBRECAD_GIT"
+    git clone $LIBRECAD_GIT $LIBRECAD_DIR
+fi
 
 pushd $LIBRECAD_DIR >/dev/null
 echo "Switched into $LIBRECAD_DIR directory"
