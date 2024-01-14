@@ -24,10 +24,15 @@ The patches contain only minimum required changes of *LibreCAD* code for making
 
 *Note: this project uses [CMake][cmake] for building.*
 
-First, run `prepare.sh` script:
+First, run `prepare.sh` script, this path local LibreCAD folder:
 
 ```sh
 ./prepare.sh
+```
+Or you can clone latest Librecad, but it may have compilation issues:
+
+```sh
+./prepare.sh latest
 ```
 
 Optionally, you can specify a certain LibreCAD commit as a base for building,
